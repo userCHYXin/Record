@@ -1,0 +1,4 @@
+实现的技术细节：Advisor （自定义拦截器）+ Structured Output （结构化输出） + ChatMemory（持久化记忆） +
+RAG （知识库检索） + PgVector （向量存储） + ChatModel（LLVM模型） + Skills  + Agent + MCP （AI协议） + SpringAI （基本框架）
++ ToolCalling （工具调用） + SpringBoot3 （基本框架） + TextSplitter（文档切割） + Prompt（提示词）  + 文档解析（PDF/DOCX/Excel/TXT/MarkDown） + 
+JDK21 （基本语言版本） + ETL （数据处理） + Routing（服务分流）
