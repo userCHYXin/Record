@@ -1,0 +1,33 @@
+参考文档： https://www.cnblogs.com/yg_zhang/p/19067843
+
+340  root 2026/02/13 13:34:51 sudo apt-get remove docker docker-engine docker.io containerd runc
+  341  root 2026/02/13 13:35:07 sudo apt-get update
+  342  root 2026/02/13 13:36:00 sudo apt-get install docker-compose-plugin
+  343  root 2026/02/13 13:39:36 sudo apt install postgresql postgresql-contrib -y
+  344  root 2026/02/13 13:41:47 sudo systemctl start postgresql
+  345  root 2026/02/13 13:41:58 sudo systemctl enable postgresql
+  346  root 2026/02/13 13:42:08 sudo -u postgres psql
+  347  root 2026/02/13 13:42:37 sudo apt install build-essential postgresql-server-dev-16 git -y
+  348  root 2026/02/13 13:44:15 sudo apt install build-essential postgresql-server-dev-12 git -y
+  349  root 2026/02/13 13:44:35 git clone https://gitee.com/dgaiot/pgvector.git
+  350  root 2026/02/13 13:44:38 ls
+  351  root 2026/02/13 13:44:41 cd pgvector/
+  352  root 2026/02/13 13:44:48 make
+  353  root 2026/02/13 13:45:16 cd ..
+  354  root 2026/02/13 13:45:19 cd pgvector/
+  355  root 2026/02/13 13:45:22 make clean
+  356  root 2026/02/13 13:45:28 git checkout v0.4.4
+  357  root 2026/02/13 13:45:38 make
+  358  root 2026/02/13 13:45:48 sudo make install
+  359  root 2026/02/13 13:46:03 sudo -u postgres psql
+  360  root 2026/02/13 13:47:03 pwd
+  361  root 2026/02/13 13:47:08 cd /etc/postgresql/16/main
+  362  root 2026/02/13 13:47:18 cd /etc/postgresql/12/main/
+  363  root 2026/02/13 13:47:19 ls
+  364  root 2026/02/13 13:47:28 vim postgresql.conf 
+  365  root 2026/02/13 13:49:00 grep -n "listen_addresses =" /etc/postgresql/12/main/postgresql.conf
+  366  root 2026/02/13 13:49:04 vim postgresql.conf 
+  367  root 2026/02/13 13:50:54 vim pg_hba.conf 
+  368  root 2026/02/13 13:52:00 sudo systemctl restart postgresql
+  369  root 2026/02/13 13:52:06 netstat -nlt | grep 5432
+  370  root 2026/02/13 14:13:37 history
